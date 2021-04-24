@@ -143,6 +143,7 @@ ul {
 /*Contacts*/
 .contacts {
   display: inline-flex;
+  font-style: inherit;
 }
 .contacts > .item {
   margin: 0px;
@@ -158,10 +159,32 @@ ul {
   letter-spacing: 0.02em;
 }
 
+.address-item:not(:last-child) {
+  margin: 0px;
+}
+
+.address-link {
+  display: flex;
+  align-items: center;
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  stroke: currentColor;
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  stroke: currentColor;
+}
+
 /*Main*/
 .hero {
   background-color: var(--footer-bg-color);
-
   max-width: 1600px;
   height: 600px;
   margin-right: auto;
@@ -237,6 +260,17 @@ ul {
   background-color: var(--accent-color);
 }
 
+.hero-button:hover,
+.hero-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.button:hover,
+.button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -249,7 +283,6 @@ ul {
 /*Feature*/
 .section-title {
   margin-bottom: 50px;
-
   text-align: center;
   font-weight: 700;
   font-size: 36px;
@@ -260,7 +293,6 @@ ul {
 .feature-list {
   display: flex;
   flex-wrap: nowrap;
-
   padding: 0px;
   margin: 0px;
   margin-top: -30px;
@@ -275,35 +307,30 @@ ul {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 700;
-  font-size 14px;
-  line-height 1.14;
+  font-size: 14px;
+  line-height: 1.14;
   text-transform: uppercase;
 }
 
-.icon-antenna{ 
+.icon-antenna {
   background-image: url('../images/icons/antenna.svg');
-background-repeat: no-repeat;
-display: inline-block;
-  ;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
 .feature-item::before {
- display: block;
+  display: block;
   content: '';
   height: 120px;
- outline: 2px solid blue; 
+  outline: 2px solid blue;
 
- /*background-color: var(--secondary-bg-color);*/
+  /*background-color: var(--secondary-bg-color);*/
   margin-right: 30px;
   margin-bottom: 30px;
-  
-  background-size: contain; 
+
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-
- 
-
-
 
 /*Occupation*/
 .work.section {
@@ -406,12 +433,16 @@ display: inline-block;
   border-radius: 50%;
   background-color: var(--primary-bg-color);
 }
+
 .social-icons-link:hover .social-icons-svg,
 .social-icons-link:focus .social-icons-svg {
   fill: var(--hero-text-color);
 }
+
 .social-icons-link:hover,
-.social-icons-link:focus {
+.social-icons-link:focus,
+.social-icons-link.cl:hover,
+.social-icons-link.cl:focus {
   background-color: var(--accent-color);
 }
 
@@ -426,9 +457,11 @@ display: inline-block;
 }
 
 /* Постоянные клиенты */
+
 .logo-icon-list {
   display: inline-flex;
 }
+
 .logo-icon-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -438,7 +471,7 @@ display: inline-block;
   align-items: center;
   width: 170px;
   height: 92px;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--icon-color);
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -456,11 +489,11 @@ display: inline-block;
   fill: var(--accent-color);
 }
 
-
-
-
-
 /*FOOTER*/
+.footer.conteiner {
+  display: flex;
+}
+
 .logo-footer.link {
   margin: 0px;
 }
@@ -500,6 +533,26 @@ display: inline-block;
   color: var(--hero-text-color);
 }
 
+.conect-box {
+  width: calc(100% / 12 * 3);
+  justify-content: center;
+  align-content: center;
+}
+
+.feature-title.conect {
+  color: var(--hero-text-color);
+  margin-bottom: 20px;
+}
+
+.social-icons.c-list {
+  display: flex;
+}
+
+.social-icons-link.cl {
+  margin-top: 0px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /*PORTFOLIO*/
 .btn-p {
   margin-top: 0;
@@ -513,10 +566,8 @@ display: inline-block;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-
   border-radius: 4px;
   padding: 6px 22px;
-  /*box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);border: 1px solid transparent;*/
 }
 
 .button-list {
@@ -545,6 +596,13 @@ img {
 
   margin-left: 30px;
   margin-top: 30px;
+}
+
+.works-list > .item:hover {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .works-list {
