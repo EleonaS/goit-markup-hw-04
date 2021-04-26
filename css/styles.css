@@ -229,18 +229,18 @@ ul {
   display: flex;
   align-items: center;
 
-  /* background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 1px solid transparent;*/
   border-radius: 4px;
+  border: none;
   font-style: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  color: var(--hero-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
 }
 
-.hero-button,
 .button {
   color: var(--primary-text-color);
   border: 0px;
@@ -250,19 +250,15 @@ ul {
 }
 
 .button:hover,
-.button:focus,
-.hero-button:hover,
-.hero-button:focus {
+.button:focus {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
 }
-
+/*
 .hero-button:hover,
 .hero-button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 1px solid transparent;
-}
+}*/
 
 .button:hover,
 .button:focus {
@@ -432,6 +428,7 @@ ul {
   height: 44px;
   border-radius: 50%;
   background-color: var(--primary-bg-color);
+  fill: var(--icon-color);
 }
 
 .social-icons-link:hover .social-icons-svg,
@@ -453,7 +450,6 @@ ul {
 .social-icons-svg {
   width: 20px;
   height: 20px;
-  fill: var(--icon-color);
 }
 
 /* Постоянные клиенты */
@@ -553,8 +549,9 @@ ul {
 }
 
 .social-icons-link.cl {
-  margin-top: 0px;
   background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--hero-text-color);
+  margin-top: 0px;
 }
 
 /*PORTFOLIO*/
@@ -602,9 +599,6 @@ img {
 }
 
 .works-list > .item:hover {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
