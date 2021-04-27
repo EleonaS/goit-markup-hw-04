@@ -489,7 +489,7 @@ ul {
 }
 
 /*FOOTER*/
-.footer.conteiner {
+.footer .conteiner {
   display: flex;
   align-items: baseline;
 }
